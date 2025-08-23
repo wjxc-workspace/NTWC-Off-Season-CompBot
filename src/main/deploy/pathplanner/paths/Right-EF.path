@@ -1,0 +1,54 @@
+{
+  "version": "2025.0",
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 7.156499999998651,
+        "y": 1.8799999999977173
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 6.03738866041955,
+        "y": 1.9748784806632962
+      },
+      "isLocked": false,
+      "linkedName": "Right"
+    },
+    {
+      "anchor": {
+        "x": 5.374468100757616,
+        "y": 2.559737894669896
+      },
+      "prevControl": {
+        "x": 5.436148337697821,
+        "y": 2.317466252971987
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": "REEF EF"
+    }
+  ],
+  "rotationTargets": [],
+  "constraintZones": [],
+  "pointTowardsZones": [],
+  "eventMarkers": [],
+  "globalConstraints": {
+    "maxVelocity": 3.0,
+    "maxAcceleration": 3.0,
+    "maxAngularVelocity": 360.0,
+    "maxAngularAcceleration": 720.0,
+    "nominalVoltage": 12.0,
+    "unlimited": false
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": 119.99999999999999
+  },
+  "reversed": false,
+  "folder": "Right",
+  "idealStartingState": {
+    "velocity": 0,
+    "rotation": 180.0
+  },
+  "useDefaultConstraints": true
+}

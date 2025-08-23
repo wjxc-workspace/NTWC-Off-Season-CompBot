@@ -1,0 +1,144 @@
+{
+  "version": "2025.0",
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "parallel",
+          "data": {
+            "commands": [
+              {
+                "type": "path",
+                "data": {
+                  "pathName": "Right-EF"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "SetScorePositionkF"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "SetScoreLevelkL2"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "Score"
+          }
+        },
+        {
+          "type": "parallel",
+          "data": {
+            "commands": [
+              {
+                "type": "path",
+                "data": {
+                  "pathName": "RCS-EF-Reverse"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "CoralStation"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "parallel",
+          "data": {
+            "commands": [
+              {
+                "type": "path",
+                "data": {
+                  "pathName": "RCS-EF"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "SetScorePositionkE"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "SetScoreLevelkL2"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "Score"
+          }
+        },
+        {
+          "type": "parallel",
+          "data": {
+            "commands": [
+              {
+                "type": "path",
+                "data": {
+                  "pathName": "RCS-EF-Reverse"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "CoralStation"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "parallel",
+          "data": {
+            "commands": [
+              {
+                "type": "path",
+                "data": {
+                  "pathName": "RCS-AB"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "SetScorePositionkB"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "SetScoreLevelkL2"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "Score"
+          }
+        }
+      ]
+    }
+  },
+  "resetOdom": true,
+  "folder": null,
+  "choreoAuto": false
+}

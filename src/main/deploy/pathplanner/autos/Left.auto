@@ -1,0 +1,144 @@
+{
+  "version": "2025.0",
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "parallel",
+          "data": {
+            "commands": [
+              {
+                "type": "path",
+                "data": {
+                  "pathName": "Left-IJ"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "SetScorePositionkI"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "SetScoreLevelkL2"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "Score"
+          }
+        },
+        {
+          "type": "parallel",
+          "data": {
+            "commands": [
+              {
+                "type": "path",
+                "data": {
+                  "pathName": "LCS-IJ-Reverse"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "CoralStation"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "parallel",
+          "data": {
+            "commands": [
+              {
+                "type": "path",
+                "data": {
+                  "pathName": "LCS-IJ"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "SetScorePositionkJ"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "SetScoreLevelkL2"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "Score"
+          }
+        },
+        {
+          "type": "parallel",
+          "data": {
+            "commands": [
+              {
+                "type": "path",
+                "data": {
+                  "pathName": "LCS-IJ-Reverse"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "CoralStation"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "parallel",
+          "data": {
+            "commands": [
+              {
+                "type": "path",
+                "data": {
+                  "pathName": "LCS-AB"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "SetScorePositionkA"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "SetScoreLevelkL2"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "Score"
+          }
+        }
+      ]
+    }
+  },
+  "resetOdom": true,
+  "folder": null,
+  "choreoAuto": false
+}
