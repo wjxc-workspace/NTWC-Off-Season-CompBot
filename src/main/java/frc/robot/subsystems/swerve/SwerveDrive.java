@@ -158,7 +158,7 @@ public class SwerveDrive implements Swerve {
   }
 
   public void setOdometryPosition(Pose2d pose) {
-    pigeon.setYaw(pose.getRotation().getDegrees());
+    resetGyro(pose.getRotation().getDegrees());
     odometry.resetPosition(getYaw(), getModulePositions(), pose);
     estimator.resetPosition(getYaw(), getModulePositions(), pose);
   }

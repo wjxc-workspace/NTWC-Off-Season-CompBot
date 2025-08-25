@@ -21,8 +21,8 @@ public class Superstructure extends StateSubsystemBase<SuperstructureState> {
   private final Map<SuperstructureState, SuperstructureState> ejectStateMap = Map.of(
     SuperstructureState.kL1, SuperstructureState.kL1Eject,
     SuperstructureState.kL2, SuperstructureState.kL2Eject,
-    SuperstructureState.kL3, SuperstructureState.kL3Eject,
-    SuperstructureState.kL4, SuperstructureState.kL4Eject
+    SuperstructureState.kL3, SuperstructureState.kL3Eject
+    // SuperstructureState.kL4, SuperstructureState.kL4Eject
   );
 
   private final Timer coralStationReverseTimer = new Timer();
@@ -96,7 +96,7 @@ public class Superstructure extends StateSubsystemBase<SuperstructureState> {
       case kL1Eject:
       case kL2Eject:
       case kL3Eject:
-      case kL4Eject:
+      // case kL4Eject:
         return !hasCoral();
       case kCoralStationReverse:
         if (coralStationReverseTimer.hasElapsed(0.5)) {

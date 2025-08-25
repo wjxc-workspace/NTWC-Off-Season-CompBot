@@ -5,34 +5,27 @@
     "data": {
       "commands": [
         {
-          "type": "parallel",
+          "type": "path",
           "data": {
-            "commands": [
-              {
-                "type": "path",
-                "data": {
-                  "pathName": "Mid-IJ"
-                }
-              },
-              {
-                "type": "named",
-                "data": {
-                  "name": "SetScorePositionkI"
-                }
-              },
-              {
-                "type": "named",
-                "data": {
-                  "name": "SetScoreLevelkL2"
-                }
-              }
-            ]
+            "pathName": "Left-IJ"
           }
         },
         {
           "type": "named",
           "data": {
-            "name": "Score"
+            "name": "kL2"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "Eject"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "Default"
           }
         }
       ]

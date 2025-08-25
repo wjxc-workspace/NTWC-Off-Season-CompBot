@@ -191,6 +191,7 @@ public class Grabber implements StateSubsystemComponent {
       } else {
         // counter++;
         // if (counter > GrabberConstants.kIntakeStallCurrent) {
+          
         //   hasCoral = true;
         //   counter = 0;
         // }

@@ -9,6 +9,7 @@ import java.util.Set;
 import com.pathplanner.lib.auto.AutoBuilder;
 import com.pathplanner.lib.auto.NamedCommands;
 
+import edu.wpi.first.math.geometry.Translation2d;
 import edu.wpi.first.wpilibj.GenericHID.RumbleType;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -42,7 +43,7 @@ public class RobotContainer {
 
   private final Swerve swerve;
   private final Superstructure superstructure;
-  private final Intake intake;
+  // private final Intake intake;
 
   private final VisionSim visionSim;
 
@@ -61,7 +62,7 @@ public class RobotContainer {
       visionSim = new VisionSim(swerve);
     }
     superstructure = new Superstructure();
-    intake = new Intake();
+    // intake = new Intake();
 
     teleopSwerve = new TeleopSwerveWithReduction(swerve, driverXbox.getHID());
 
@@ -71,7 +72,7 @@ public class RobotContainer {
     for (String position : positionValues) {
       NamedCommands.registerCommand("SetScorePosition" + position, Commands.runOnce(() -> autoScoreManager.setScorePosition(position)));
     }
-    String levelValues[] = {"kL1", "kL2", "kL3", "kL4"};
+    String levelValues[] = {"kL1", "kL2", "kL3"};
     for (String level : levelValues) {
       NamedCommands.registerCommand("SetScoreLevel" + level, Commands.runOnce(() -> autoScoreManager.setScoreLevel(ScoreLevel.valueOf(level))));
       NamedCommands.registerCommand(level, superstructure.setGoalStateCommand(SuperstructureState.valueOf(level)));
@@ -79,6 +80,7 @@ public class RobotContainer {
     NamedCommands.registerCommand("Score", autoScore());
     NamedCommands.registerCommand("Eject", superstructure.toEjectStateCommand());
     NamedCommands.registerCommand("CoralStation", superstructure.setGoalStateCommand(SuperstructureState.kCoralStation));
+    NamedCommands.registerCommand("Default", superstructure.setGoalStateCommand(SuperstructureState.kDefault));
     
     autoChooser = AutoBuilder.buildAutoChooser();
 
@@ -88,7 +90,7 @@ public class RobotContainer {
 
     SmartDashboard.putData("AutoChooser", autoChooser);
     SmartDashboard.putData(superstructure);
-    SmartDashboard.putData(intake);
+    // SmartDashboard.putData(intake);
   }
 
   private void configureBindings() {
@@ -99,7 +101,7 @@ public class RobotContainer {
     // When "AutoScore" is enabled, the buttons register the autoscore commands
     // when disabled, it directly drives the superstructure to the corresponding
     // state
-    String levelValues[] = {"kL1", "kL2", "kL3", "kL4"};
+    String levelValues[] = {"kL1", "kL2", "kL3"};
     for (String level : levelValues) {
       buttonBox.getButton(Button.valueOf(level))
         .onTrue(
@@ -177,30 +179,30 @@ public class RobotContainer {
       );
 
     // Intake algae
-    driverXbox.b()
-      .onTrue(
-        intake.setGoalStateCommand(IntakeState.kIntake)
-          .andThen(intake.setGoalStateCommand(IntakeState.kHold)) 
-      );
+    // driverXbox.b()
+    //   .onTrue(
+    //     intake.setGoalStateCommand(IntakeState.kIntake)
+    //       .andThen(intake.setGoalStateCommand(IntakeState.kHold)) 
+    //   );
 
-    // Eject algae
-    driverXbox.rightTrigger(0.1)
-      .and(intake::hasAlgae)
-      .onTrue(
-        intake.setGoalStateCommand(IntakeState.kEject)
-          .finallyDo(
-            () -> {
-              intake.setGoalState(IntakeState.kDefault);
-              CommandScheduler.getInstance().schedule(rumbule(0.2, 0.3));
-            }
-          )
-      );
+    // // Eject algae
+    // driverXbox.rightTrigger(0.1)
+    //   .and(intake::hasAlgae)
+    //   .onTrue(
+    //     intake.setGoalStateCommand(IntakeState.kEject)
+    //       .finallyDo(
+    //         () -> {
+    //           intake.setGoalState(IntakeState.kDefault);
+    //           CommandScheduler.getInstance().schedule(rumbule(0.2, 0.3));
+    //         }
+    //       )
+    //   );
     
     // all-to-default-state command
     driverXbox.y().onTrue(
       new ParallelCommandGroup(
-        superstructure.setGoalStateCommand(SuperstructureState.kDefault),
-        intake.setGoalStateCommand(IntakeState.kDefault)
+        superstructure.setGoalStateCommand(SuperstructureState.kDefault)
+        // intake.setGoalStateCommand(IntakeState.kDefault)
       )
     );
 
@@ -243,6 +245,15 @@ public class RobotContainer {
   }
 
   public Command getAutonomousCommand() {
+    // return 
+    //   Commands.runEnd(
+    //     () -> swerve.drive(new Translation2d(0.3, 0), 0, false),
+    //     () -> {
+    //       swerve.drive(new Translation2d(), 0, false);
+    //       swerve.resetGyro(180);
+    //     }, 
+    //     swerve
+    //   ).withTimeout(5);
     return autoChooser.getSelected();
   }
 

@@ -48,6 +48,7 @@ public class TeleopSwerveWithReduction extends Command {
     // square the input to inprove driving experience
     xSpeed = Math.copySign(xSpeed * xSpeed, xSpeed);
     ySpeed = Math.copySign(ySpeed * ySpeed, ySpeed);
+    rotSpeed = Math.copySign(rotSpeed * rotSpeed, rotSpeed);
 
     swerve.drive(
         new Translation2d(xSpeed, ySpeed).times(SwerveConstants.kModuleMaxSpeed),

@@ -15,8 +15,8 @@ public class AutoScoreManager {
   public enum ScoreLevel {
     kL1(SuperstructureState.kL1),
     kL2(SuperstructureState.kL2),
-    kL3(SuperstructureState.kL3),
-    kL4(SuperstructureState.kL4);
+    kL3(SuperstructureState.kL3);
+    // kL4(SuperstructureState.kL4);
 
     private final SuperstructureState state;
   }

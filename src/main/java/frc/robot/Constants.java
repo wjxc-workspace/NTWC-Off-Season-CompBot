@@ -136,7 +136,7 @@ public class Constants {
           SuperstructureState.kL1,
           SuperstructureState.kL2,
           SuperstructureState.kL3,
-          SuperstructureState.kL4,
+          // SuperstructureState.kL4,
           SuperstructureState.kL1Hit,
           SuperstructureState.kL2Hit,
           SuperstructureState.kPreCoralStation));
@@ -150,7 +150,7 @@ public class Constants {
           SuperstructureState.kDefault,
           SuperstructureState.kL2,
           SuperstructureState.kL3,
-          SuperstructureState.kL4,
+          // SuperstructureState.kL4,
           SuperstructureState.kL1Eject));
       kAdjList.put(SuperstructureState.kL1Eject, List.of(
           SuperstructureState.kL1));
@@ -158,7 +158,7 @@ public class Constants {
           SuperstructureState.kDefault,
           SuperstructureState.kL1,
           SuperstructureState.kL3,
-          SuperstructureState.kL4,
+          // SuperstructureState.kL4,
           SuperstructureState.kL2Eject));
       kAdjList.put(SuperstructureState.kL2Eject, List.of(
           SuperstructureState.kL2));
@@ -166,18 +166,18 @@ public class Constants {
           SuperstructureState.kDefault,
           SuperstructureState.kL1,
           SuperstructureState.kL2,
-          SuperstructureState.kL4,
+          // SuperstructureState.kL4,
           SuperstructureState.kL3Eject));
       kAdjList.put(SuperstructureState.kL3Eject, List.of(
           SuperstructureState.kL3));
-      kAdjList.put(SuperstructureState.kL4, List.of(
-          SuperstructureState.kDefault,
-          SuperstructureState.kL1,
-          SuperstructureState.kL2,
-          SuperstructureState.kL3,
-          SuperstructureState.kL4Eject));
-      kAdjList.put(SuperstructureState.kL4Eject, List.of(
-          SuperstructureState.kL4));
+      // kAdjList.put(SuperstructureState.kL4, List.of(
+      //     SuperstructureState.kDefault,
+      //     SuperstructureState.kL1,
+      //     SuperstructureState.kL2,
+      //     SuperstructureState.kL3,
+      //     SuperstructureState.kL4Eject));
+      // kAdjList.put(SuperstructureState.kL4Eject, List.of(
+      //     SuperstructureState.kL4));
       kAdjList.put(SuperstructureState.kPreCoralStation, List.of(
           SuperstructureState.kDefault,
           SuperstructureState.kCoralStation,
@@ -229,7 +229,7 @@ public class Constants {
     public static final int kElbowMotorCurrentLimit = 40;
     public static final int kIntakeMotorCurrentLimit = 40;
 
-    public static final int kLimitSwitchPort = 5;
+    public static final int kLimitSwitchPort = 9;
 
     // cancoder constants
     public static final double kAbsoluteSensorDiscontinuityPoint = 1;
@@ -255,7 +255,7 @@ public class Constants {
     public static final double kHitAngle = 6.2;
 
     public static final double kIntakeSpeed = 0.5;
-    public static final double kOuttakeSpeed = -0.5;
+    public static final double kOuttakeSpeed = -0.3;
 
     public static final double kIntakeStallCurrent = 15;
 
@@ -351,7 +351,7 @@ public class Constants {
   }
 
   public static final class LEDConstants {
-    public static final int kPort = 0;
+    public static final int kPort = 9;
     public static final int kLength = 36;
   }
 

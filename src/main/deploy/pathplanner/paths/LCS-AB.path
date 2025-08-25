@@ -3,13 +3,13 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 1.17,
-        "y": 7.09625
+        "x": 1.282684426229508,
+        "y": 6.8481045081967205
       },
       "prevControl": null,
       "nextControl": {
-        "x": 1.5884410611403093,
-        "y": 6.251476836424201
+        "x": 1.7011254873698174,
+        "y": 6.003331344620921
       },
       "isLocked": false,
       "linkedName": "CORALSTATION LEFT"

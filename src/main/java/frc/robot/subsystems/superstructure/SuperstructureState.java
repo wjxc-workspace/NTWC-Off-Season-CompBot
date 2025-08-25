@@ -51,18 +51,18 @@ public enum SuperstructureState {
           .grabberAngle(GrabberConstants.kL3Angle)
           .grabberSpeed(GrabberConstants.kOuttakeSpeed)
           .build()),
-  kL4(
-      SuperstructureStateData.builder()
-          .elevatorHeight(ElevatorConstants.kL4Height)
-          .grabberAngle(GrabberConstants.kL4Angle)
-          .grabberSpeed(0)
-          .build()),
-  kL4Eject(
-      SuperstructureStateData.builder()
-          .elevatorHeight(ElevatorConstants.kL4Height)
-          .grabberAngle(GrabberConstants.kL4Angle)
-          .grabberSpeed(GrabberConstants.kOuttakeSpeed)
-          .build()),
+//   kL4(
+//       SuperstructureStateData.builder()
+//           .elevatorHeight(ElevatorConstants.kL4Height)
+//           .grabberAngle(GrabberConstants.kL4Angle)
+//           .grabberSpeed(0)
+//           .build()),
+//   kL4Eject(
+//       SuperstructureStateData.builder()
+//           .elevatorHeight(ElevatorConstants.kL4Height)
+//           .grabberAngle(GrabberConstants.kL4Angle)
+//           .grabberSpeed(GrabberConstants.kOuttakeSpeed)
+//           .build()),
   kPreCoralStation(
       SuperstructureStateData.builder()
           .elevatorHeight(ElevatorConstants.kCoralStationHeight)
@@ -83,13 +83,13 @@ public enum SuperstructureState {
           .build()),
   kL1Hit(
       SuperstructureStateData.builder()
-          .elevatorHeight(ElevatorConstants.kL2Height)
+          .elevatorHeight(ElevatorConstants.kL2Height - 0.08)
           .grabberAngle(GrabberConstants.kHitAngle)
           .grabberSpeed(GrabberConstants.kOuttakeSpeed)
           .build()),
   kL2Hit(
       SuperstructureStateData.builder()
-          .elevatorHeight(ElevatorConstants.kL3Height)
+          .elevatorHeight(ElevatorConstants.kL3Height - 0.1)
           .grabberAngle(GrabberConstants.kHitAngle)
           .grabberSpeed(GrabberConstants.kOuttakeSpeed)
           .build());;
